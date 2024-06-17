@@ -47,3 +47,11 @@ def remove_duplicates(collection, value):
         elif value not in new_collection:
             new_collection.append(each_value)
     return new_collection
+
+
+def to_float(s):
+    try:
+        return float(s)
+    except ValueError:
+        return 0.0
+    
