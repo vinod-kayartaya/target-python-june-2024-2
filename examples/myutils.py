@@ -1,3 +1,5 @@
+import time
+
 def subtotal(kind, *nums):
     """
     Calculates one of the following and returns the same based on the value of kind.
@@ -55,3 +57,12 @@ def to_float(s):
     except ValueError:
         return 0.0
     
+
+def profile(fn):
+    def wrapper():
+        start = time.time()
+        fn()
+        end = time.time()
+        print(f'total time taken is {end-start} millis')
+
+    return wrapper
