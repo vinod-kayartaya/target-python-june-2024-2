@@ -1,0 +1,24 @@
+GET /api/customers/1006
+Host: localhost:1234
+Accept: application/json
+
+###
+
+POST /api/customers
+Host: localhost:1234
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Kishore",
+    "city": "Vasco",
+    "email": "kishore@xmpl.com"
+}
+
+###
+
+GET /api/customers
+Host: localhost:1234
+Accept: application/json
+
+###
