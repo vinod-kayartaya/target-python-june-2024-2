@@ -7,7 +7,9 @@ db_filename = 'customersdb.sqlite'
 
 
 def create_response(data, status=200, mimetype='application/json'):
-    return Response(json.dumps(data), status=status, mimetype=mimetype)
+    headers = {}
+    headers['Access-Control-Allow-Origin']='*'
+    return Response(json.dumps(data), status=status, mimetype=mimetype, headers=headers)
 
 
 @app.get('/api/customers/<int:customer_id>')
