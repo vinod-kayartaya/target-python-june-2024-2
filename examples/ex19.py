@@ -1,5 +1,6 @@
 # from sqlite3 import connect, DatabaseError
 from mysql.connector import connect, DatabaseError
+# pip install mysql-connector-python
 import csv
 
 
